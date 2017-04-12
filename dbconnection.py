@@ -7,8 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime, Float,ForeignKey
 
-
-engine = create_engine('postgresql://dominic:27021982@domtest.crr096m7j24y.ap-southeast-2.rds.amazonaws.com:5432/domtest')
+engine = create_engine()
 Session=sessionmaker(bind=engine)
 session=Session()
 Base=declarative_base()
