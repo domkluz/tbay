@@ -1,22 +1,35 @@
-import dbconnection
 import menu
 
+response = "start"
 
-print("Hi, welcome to TBAY")
-print("Are you a new user to TBAY - Please input - Yes or No")
-response = str(input())
+while response == "start":
 
-if response == ("yes" or "Yes"):
-    menu.new_user()
+    print("Hi, welcome to TBAY")
+    print("Are you a new user to TBAY - Please input - Yes or No\n")
+    response = str(input())
 
-else:
-    menu.returning_user()
+    if response == ("yes" or "Yes"):
+        menu.new_user()
 
-print("To auction an item enter sale, or enter bid")
+    else:
+        menu.returning_user()
 
-response == str(input())
+    print("To auction an item enter sale, or enter bid\n")
 
-if response == ("sale" or "Sale"):
-    menu.sale()
-else:
-    menu.bid()
+    response = str(input())
+
+
+    if response == ("sale" or "Sale"):
+        menu.sale()
+    else:
+        menu.bid()
+    
+    print("to end enter end or start again press start\n")
+
+    response = str(input())
+    
+
+
+
+
+
